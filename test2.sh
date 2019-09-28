@@ -9,7 +9,7 @@ echo "Starting script sayIPbs "
 private=`hostname -I | sed -E -e 's/[[:blank:]]+/_/g' `
 #ip=$(wget https://raw.githubusercontent.com/lbaitemple/raspberry_IP/master/ipaddress  -q -O -)
 #string="private address is $private"
-res=`mosquitto_pub -h m16.cloudmqtt.com -p 12247 -u pspniyjc -P sBm4EpaDgRe5 -t raspberry/ipaddress -m $private  > /dev/nul 2>&1`
+res=`mosquitto_pub -h m16.cloudmqtt.com -p 12247 -u pspniyjc -P sBm4EpaDgRe5 -t raspberry/ipaddress -m $private  > /dev/null 2>&1`
 #echo $string | sed 's/\./ dot /g' 
 #echo $string | sed 's/\./ dot /g' | flite -voice slt
 #say $string 
