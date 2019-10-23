@@ -3,7 +3,7 @@
 ```
 sudo apt-get install mosquitto mosquitto-clients git -y
 git clone https://github.com/lbaitemple/raspberry_IP/
-sudo pip install Adafruit_SSD1306
+sudo pip install Adafruit_SSD1306 RPi.GPIO
 cp raspberry_IP/newtest2.sh ~/test2.sh
 chmod +x ~/test2.sh
 ```
