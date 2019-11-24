@@ -1,11 +1,17 @@
-### create USB onn-the-go connection  (https://www.hardill.me.uk/wordpress/2019/11/02/pi4-usb-c-gadget/)
+### create USB onn-the-go connection  
 
-Add dtoverlay=dwc2 to the /boot/config.txt
-Add modules-load=dwc2 to the end of /boot/cmdline.txt
-Add libcomposite to /etc/modules
-Add denyinterfaces usb0 to /etc/dhcpcd.conf
-Install dnsmasq with sudo apt-get install dnsmasq
-Create /etc/dnsmasq.d/usb with following content
+(https://www.hardill.me.uk/wordpress/2019/11/02/pi4-usb-c-gadget/)
+
+* Add dtoverlay=dwc2 to the /boot/config.txt
+* Add modules-load=dwc2 to the end of /boot/cmdline.txt
+* Add libcomposite to /etc/modules
+* Add denyinterfaces usb0 to /etc/dhcpcd.conf
+*Install dnsmasq
+```
+sudo apt-get install dnsmasq
+```
+
+* Create /etc/dnsmasq.d/usb with following content
 
 ```
 interface=usb0
@@ -14,7 +20,7 @@ dhcp-option=3
 leasefile-ro
 ```
 
-Create /etc/network/interfaces.d/usb0 with the following content
+* Create /etc/network/interfaces.d/usb0 with the following content
 ```
 auto usb0
 allow-hotplug usb0
@@ -22,7 +28,8 @@ iface usb0 inet static
   address 10.55.0.1
   netmask 255.255.255.248
 ```
-Create /root/usb.sh
+
+* Create /root/usb.sh
 ```
 #!/bin/bash
 cd /sys/kernel/config/usb_gadget/
@@ -56,12 +63,13 @@ ls /sys/class/udc > UDC
 ifup usb0
 service dnsmasq restart
 ```
-Also, you should add the following command
+* Also, you should add the following command
 ```
 sudo chmod +x /root/usb.sh
 ```
 
-Add /root/usb.sh to /etc/rc.local before exit 0
+* Add /root/usb.sh to /etc/rc.local before exit 0
+
 With this setup the Pi4 will show up as a ethernet device with an IP address of 10.55.0.1 and 
 will assign the device you plug it into an IP address via DHCP. This means you can just ssh to pi@10.55.0.1 to start using it.
 
