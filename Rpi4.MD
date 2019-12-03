@@ -94,7 +94,7 @@ nano .bashrc
 ```
 Add
 ```
-alias runserver='jupyter notebook  --port 8888 --ip'
+alias runserver='jupyter notebook  --port 8888 --ip  '
 ```
 Save the file and you can run
 ```
