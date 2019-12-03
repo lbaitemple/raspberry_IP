@@ -73,3 +73,31 @@ sudo chmod +x /root/usb.sh
 With this setup the Pi4 will show up as a ethernet device with an IP address of 10.55.0.1 and 
 will assign the device you plug it into an IP address via DHCP. This means you can just ssh to pi@10.55.0.1 to start using it.
 
+
+### create jupyter
+
+```
+sudo -i
+apt-get update
+apt-get install python3-matplotlib
+apt-get install python3-scipy
+pip3 install --upgrade pip
+reboot
+sudo pip3 install jupyter
+sudo apt-get clean
+sudo update-alternatives --config x-www-browser
+sudo reboot
+```
+Create an alias in .bashrc
+```
+nano .bashrc
+```
+Add
+```
+alias runserver='jupyter notebook  --port 8888 --ip'
+```
+Save the file and you can run
+```
+source ~/.bashrc
+runserver ip_address
+```
