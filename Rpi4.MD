@@ -1,4 +1,4 @@
-### create USB onn-the-go connection  
+### create USB on-the-go connection  
 
 (https://www.hardill.me.uk/wordpress/2019/11/02/pi4-usb-c-gadget/)
 
