@@ -6,7 +6,7 @@
 * Add modules-load=dwc2 to the end of /boot/cmdline.txt
 * Add libcomposite to /etc/modules
 * Add denyinterfaces usb0 to /etc/dhcpcd.conf
-*Install dnsmasq
+* Install dnsmasq
 ```
 sudo apt-get install dnsmasq
 ```
