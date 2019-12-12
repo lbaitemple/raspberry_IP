@@ -101,3 +101,9 @@ Save the file and you can run
 source ~/.bashrc
 runserver ip_address
 ```
+
+#### ROS
+
+```
+rosdep install -y --from-paths src --ignore-src --rosdistro melodic -r --os=debian:buster
+```
