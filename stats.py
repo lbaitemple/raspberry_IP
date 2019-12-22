@@ -29,6 +29,10 @@ from PIL import ImageFont
 
 import subprocess
 
+def cpu_temp():
+    tempF = (((int(open('/sys/class/thermal/thermal_zone0/temp').read()) / 1000)*9/5)+32)
+    return "CPU TEMP: %sF" % str(tempF)
+
 # Raspberry Pi pin configuration:
 RST = None     # on the PiOLED this pin isnt used
 # Note the following are only used with SPI:
@@ -117,12 +121,14 @@ while True:
 #    MemUsage = subprocess.check_output(cmd, shell = True )
 #    cmd = "df -h | awk '$NF==\"/\"{printf \"Disk: %d/%dGB %s\", $3,$2,$5}'"
 #    Disk = subprocess.check_output(cmd, shell = True )
+    cmd="lsb_release -c"
+    CODE=subprocess.check_output(cmd, shell = True )
 
     # Write two lines of text.
 
     draw.text((x, top),       "IP: " + str(IP),  font=font, fill=255)
- #   draw.text((x, top+8),     str(CPU), font=font, fill=255)
- #   draw.text((x, top+16),    str(MemUsage),  font=font, fill=255)
+    draw.text((x, top+8),     cpu_temp(), font=font, fill=255)
+    draw.text((x, top+16),    str(CODE),  font=font, fill=255)
  #   draw.text((x, top+25),    str(Disk),  font=font, fill=255)
 
     # Display image.
