@@ -28,7 +28,22 @@ from PIL import ImageDraw
 from PIL import ImageFont
 
 import subprocess
+import signal
+import time
 
+class GracefulKiller:
+  kill_now = False
+  def __init__(self,display):
+    self.display=display
+    signal.signal(signal.SIGINT, self.exit_gracefully)
+    signal.signal(signal.SIGTERM, self.exit_gracefully)
+
+  def exit_gracefully(self,signum, frame):
+    print "exit"
+    self.display.clear()
+    self.display.display()
+    self.kill_now = True
+ 
 def cpu_temp():
     tempF = (((int(open('/sys/class/thermal/thermal_zone0/temp').read()) / 1000)*9/5)+32)
     return "CPU TEMP: %sF" % str(tempF)
@@ -106,8 +121,9 @@ font = ImageFont.load_default()
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the same directory as the python script!
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
 # font = ImageFont.truetype('Minecraftia.ttf', 8)
+killer = GracefulKiller(disp)
 
-while True:
+while not killer.kill_now:
 
     # Draw a black filled box to clear the image.
     draw.rectangle((0,0,width,height), outline=0, fill=0)
