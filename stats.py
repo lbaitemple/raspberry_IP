@@ -130,6 +130,7 @@ while not killer.kill_now:
 
     # Shell scripts for system monitoring from here : https://unix.stackexchange.com/questions/119126/command-to-display-memory-usage-disk-usage-and-cpu-load
     cmd = "hostname -I | cut -d\' \' -f1"
+    cmd  = "ip address | grep wlan1 | tail -1 | cut -d'/' -f 1 | cut -d 't'  -f  2"
     IP = subprocess.check_output(cmd, shell = True )
 #    cmd = "top -bn1 | grep load | awk '{printf \"CPU Load: %.2f\", $(NF-2)}'"
 #    CPU = subprocess.check_output(cmd, shell = True )
