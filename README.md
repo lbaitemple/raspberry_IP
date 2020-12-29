@@ -10,6 +10,51 @@ cp raspberry_IP/stats.py ~/stats.py
 chmod +x ~/test2.sh
 ```
 
+# Install jupyter lab
+```
+sudo apt install -y nodejs npm
+sudo pip3 install jupyter jupyterlab
+sudo jupyter labextension install @jupyter-widgets/jupyterlab-manager
+jupyter lab --generate-config
+```
+#jupyter notebook password
+```
+python3 -c "from notebook.auth.security import set_password; set_password('$password', '$HOME/.jupyter/jupyter_notebook_config.json')"
+```
+# install jetbot python module
+```
+cd
+sudo apt install -y python3-smbus
+cd ~/pi
+sudo apt-get install -y cmake
+sudo python3 setup.py install 
+```
+# Install jetbot services
+```
+cd jetbot/utils
+python3 create_stats_service.py
+sudo mv jetbot_stats.service /etc/systemd/system/jetbot_stats.service
+sudo systemctl enable jetbot_stats
+sudo systemctl start jetbot_stats
+python3 create_jupyter_service.py
+sudo mv jetbot_jupyter.service /etc/systemd/system/jetbot_jupyter.service
+sudo systemctl enable jetbot_jupyter
+sudo systemctl start jetbot_jupyter
+```
+# Make swapfile
+```
+cd 
+sudo fallocate -l 4G /var/swapfile
+sudo chmod 600 /var/swapfile
+sudo mkswap /var/swapfile
+sudo swapon /var/swapfile
+sudo bash -c 'echo "/var/swapfile swap swap defaults 0 0" >> /etc/fstab'
+```
+# Copy JetBot notebooks to home directory
+```
+cp -r ~/jetbot/notebooks ~/Notebooks
+```
+
 You will need to ensure a startup service to enable network
 ```
 sudo systemctl is-enabled systemd-networkd-wait-online.service
