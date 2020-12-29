@@ -1,7 +1,7 @@
 # raspberry_IP
 #This code will upload raspberry private ip address to iot.eclipse.org using mqtt protocol
 ```
-sudo apt-get install python-pip python-pil  i2c-tools git mosquitto-clients -y
+#sudo apt-get install python-pip python-pil  i2c-tools git mosquitto-clients -y
 git clone https://github.com/lbaitemple/raspberry_IP/
 sudo pip install Adafruit_SSD1306 RPi.GPIO
 sudo sh raspberry_IP/setup-i2c.sh
@@ -9,11 +9,16 @@ cp raspberry_IP/newtest2.sh ~/test2.sh
 cp raspberry_IP/stats.py ~/stats.py
 chmod +x ~/test2.sh
 ```
+### need nodejs > 12.0.0, you will need to install nvm [do not use default raspberry pi node install]
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+source ~/.bashrc 
+nvm install node
+```
 
 # Install jupyter lab
 ```
-curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
-sudo apt install -y nodejs npm python3-pip
+sudo apt install python3-pip python3-pil  i2c-tools git mosquitto-clients -y
 sudo pip3 install jupyter jupyterlab
 sudo jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter lab --generate-config
