@@ -12,7 +12,7 @@ chmod +x ~/test2.sh
 
 # Install jupyter lab
 ```
-sudo apt install -y nodejs npm
+sudo apt install -y nodejs npm python3-pip
 sudo pip3 install jupyter jupyterlab
 sudo jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter lab --generate-config
