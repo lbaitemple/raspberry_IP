@@ -12,6 +12,7 @@ chmod +x ~/test2.sh
 
 # Install jupyter lab
 ```
+curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 sudo apt install -y nodejs npm python3-pip
 sudo pip3 install jupyter jupyterlab
 sudo jupyter labextension install @jupyter-widgets/jupyterlab-manager
