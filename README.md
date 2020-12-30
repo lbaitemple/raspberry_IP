@@ -1,7 +1,7 @@
 # raspberry_IP
 #This code will upload raspberry private ip address to iot.eclipse.org using mqtt protocol
 ```
-#sudo apt-get install python-pip python-pil  i2c-tools git mosquitto-clients -y
+sudo apt-get install python3-pip python3-pil  i2c-tools git mosquitto-clients -y
 git clone https://github.com/lbaitemple/raspberry_IP/
 sudo pip install Adafruit_SSD1306 RPi.GPIO
 sudo sh raspberry_IP/setup-i2c.sh
