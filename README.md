@@ -3,7 +3,7 @@
 ```
 sudo apt-get install python3-pip python3-pil  i2c-tools git mosquitto-clients -y
 git clone https://github.com/lbaitemple/raspberry_IP/
-sudo pip install Adafruit_SSD1306 RPi.GPIO
+pip3 install Adafruit_SSD1306 RPi.GPIO
 sudo sh raspberry_IP/setup-i2c.sh
 cp raspberry_IP/newtest2.sh ~/test2.sh
 cp raspberry_IP/stats.py ~/stats.py
