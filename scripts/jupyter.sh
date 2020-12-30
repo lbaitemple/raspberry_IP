@@ -18,7 +18,7 @@ sudo -H pip3 install jupyterlab
 mkdir -p /home/pi/notebooks
 
 jupyter lab --generate-config
-python3 -c "from notebook.auth.security import set_password; set_password('$password', '$HOME/.jupyter/jupyter_notebook_config.json')"
+python3 -c "from jupyter_server.auth.security import set_password; set_password('$password', '$HOME/.jupyter/jupyter_server_config.json')"
 #sudo chown -R pi:pi /home/pi/.local/share/
 
 # Install bokeh
