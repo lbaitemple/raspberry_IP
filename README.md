@@ -10,6 +10,20 @@ cp raspberry_IP/stats.py ~/stats.py
 chmod +x ~/test2.sh
 ```
 
+You will need to ensure a startup service to enable network
+```
+sudo systemctl is-enabled systemd-networkd-wait-online.service
+sudo systemctl enable systemd-networkd-wait-online.service
+```
+Now, you will need to create a startup service
+```
+sudo cp raspberry_IP/ipaddress.service /lib/systemd/system
+sudo systemctl daemon-reload
+sudo systemctl enable  ipaddress
+sudo systemctl start  ipaddress
+```
+
+
 # Install jupyter lab
 ```
 cd ~/raspberry_IP/scripts
@@ -64,18 +78,6 @@ sudo bash -c 'echo "/var/swapfile swap swap defaults 0 0" >> /etc/fstab'
 cp -r ~/jetbot/notebooks ~/Notebooks
 ```
 
-You will need to ensure a startup service to enable network
-```
-sudo systemctl is-enabled systemd-networkd-wait-online.service
-sudo systemctl enable systemd-networkd-wait-online.service
-```
-Now, you will need to create a startup service
-```
-sudo cp raspberry_IP/ipaddress.service /lib/systemd/system
-sudo systemctl daemon-reload
-sudo systemctl enable  ipaddress
-sudo systemctl start  ipaddress
-```
 
 
 If you have a local mqtt broker, you can use the following command to read ip address
