@@ -28,7 +28,7 @@ JUPYTER_SERVICE_NAME = 'jet_jupyter'
 def get_jupyter_service(working_directory):
     assert(os.path.isdir(working_directory))
     working_directory='/home/pi/'
-    notebook_directory='/home/pi/notebooks'
+    notebook_directory='/home/pi/'
     service_str = JUPYTER_SERVICE_TEMPLATE % (notebook_directory, working_directory)
     return service_str
 
