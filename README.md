@@ -13,7 +13,8 @@ chmod +x ~/test2.sh
 # Install jupyter lab
 ```
 cd ~/raspberry_IP/scripts
-jupyter.sh
+chmod +x jupyter.sh
+./jupyter.sh
 
 ```
 
