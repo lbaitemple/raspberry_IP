@@ -16,6 +16,14 @@ chmod +x jupyter.sh
 
 ```
 
+# Install ROS
+
+```
+chmod +x installros.sh
+./installros.sh
+```
+
+
 # Install Greengrass v2
 ```
 chmod +x greengrass.sh
