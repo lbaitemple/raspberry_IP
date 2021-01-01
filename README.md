@@ -19,13 +19,15 @@ chmod +x jupyter.sh
 # Install ROS
 
 ```
+cd ~/raspberry_IP/
 chmod +x installros.sh
 ./installros.sh
 ```
 
 
-# Install Greengrass v2
+# Install Greengrass v1 and v2, make sure you add aws credential first before you run the commands below
 ```
+cd ~/raspberry_IP/
 chmod +x greengrass.sh
 ./greengrass.sh
 ```
