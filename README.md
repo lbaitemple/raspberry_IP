@@ -13,11 +13,11 @@ chmod +x loadscreen.sh
 ./loadscreen.sh
 ```
 
-# Install jupyter lab
+# Install jupyter lab with [passwd], default is raspberry
 ```
 cd ~/raspberry_IP/scripts
 chmod +x jupyter.sh
-./jupyter.sh
+./jupyter.sh [passwd]
 
 ```
 
