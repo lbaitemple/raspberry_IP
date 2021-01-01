@@ -3,7 +3,7 @@
 sudo raspi-config
 ```
 
-# Install all
+## 1.1 Install all for 1.1.a, 1.1.b and 1.1.c
 ```
 sudo apt install git -y
 git clone -b jupyter https://github.com/lbaitemple/raspberry_IP/
@@ -12,7 +12,7 @@ chmod +x *.sh
 ./allinstall.sh
 ```
 
-# raspberry_IP
+### 1.1.a raspberry_IP
 This code will upload raspberry private ip address to iot.eclipse.org using mqtt protocol
 ```
 sudo apt install git -y
@@ -22,7 +22,7 @@ chmod +x loadscreen.sh
 ./loadscreen.sh
 ```
 
-## Install jupyter lab with [passwd], default is raspberry
+### 1.1.b Install jupyter lab with [passwd], default is raspberry
 ```
 cd ~/raspberry_IP/scripts
 chmod +x jupyter.sh
@@ -30,7 +30,7 @@ chmod +x jupyter.sh
 
 ```
 
-## Install ROS
+### 1.1.c Install ROS
 
 ```
 cd ~/raspberry_IP/
@@ -39,7 +39,7 @@ chmod +x installros.sh
 ```
 
 
-## Install Greengrass v1 and v2, make sure you add aws credential first before you run the commands below
+## 2.1 Install Greengrass v1 and v2, make sure you add aws credential first before you run the commands below
 ```
 cd ~/raspberry_IP/
 chmod +x greengrass.sh
