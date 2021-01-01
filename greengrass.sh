@@ -7,7 +7,7 @@ export REGION=us-east-1
 
 sudo bash -c 'echo "fs.protected_hardlinks = 1" >> /etc/sysctl.d/98-rpi.conf'
 sudo bash -c 'echo "fs.protected_symlinks = 1" >> /etc/sysctl.d/98-rpi.conf'
-sudo bash -c 'sed "${s/$/ cgroup_enable=memory cgroup_memory=1/}" /boot/cmdline.txt > /boot/cmdline.txt'
+sed '${s/$/ cgroup_enable=memory cgroup_memory=1/}' /boot/cmdline.txt |sudo tee /boot/cmdline.txt
 sudo apt install openjdk-8-jdk -y
 cd ~
 curl -s https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip > greengrass-nucleus-latest.zip
