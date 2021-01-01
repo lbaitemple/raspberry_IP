@@ -12,7 +12,7 @@ chmod +x *.sh
 ./allinstall.sh
 ```
 
-### 1.1.a raspberry_IP
+### 1.1.a raspberry_IP (OLED screen is required)
 This code will upload raspberry private ip address to iot.eclipse.org using mqtt protocol
 ```
 sudo apt install git -y
