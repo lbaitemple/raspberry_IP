@@ -11,7 +11,7 @@ sudo cp raspberry_IP/ipaddress.service /lib/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl enable  ipaddress
 sudo systemctl start  ipaddress
-echo "There is a long wait here to create a swap memory"
+echo "There is a long wait here to create a swap memory ...., do not use ctrl-c to cancel the installation process"
 sudo dd if=/dev/zero of=/swap1 bs=1M count=4096
 sudo mkswap /swap1
 sudo swapon /swap1
