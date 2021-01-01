@@ -1,3 +1,8 @@
+# Turn on I2C in interface
+```
+sudo raspi-config
+```
+
 # raspberry_IP
 This code will upload raspberry private ip address to iot.eclipse.org using mqtt protocol
 ```
