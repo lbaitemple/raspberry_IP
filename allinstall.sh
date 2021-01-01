@@ -1,6 +1,3 @@
-chmod +x *.sh
-sudo apt install git -y
-git clone -b jupyter https://github.com/lbaitemple/raspberry_IP/
 cd ~/raspberry_IP/
 chmod +x loadscreen.sh
 ./loadscreen.sh
