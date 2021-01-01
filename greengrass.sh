@@ -17,4 +17,7 @@ sudo chmod 755 /greengrass/v2 && sudo chmod 755 /greengrass
 # download greengrass v1
 wget https://d1onfpft10uf5o.cloudfront.net/greengrass-core/downloads/1.9.4/greengrass-linux-armv7l-1.9.4.tar.gz
 gunzip -c greengrass-linux-armv7l-1.9.4.tar.gz | sudo tar -xvf - --directory /
-sudo /greengrass/v2/alts/current/distro/bin/loader
+# add ggc_user
+sudo adduser --system ggc_user
+sudo addgroup --system ggc_group
+#sudo /greengrass/v2/alts/current/distro/bin/loader
