@@ -3,6 +3,14 @@
 sudo raspi-config
 ```
 
+# Install all
+```
+chmod +x *.sh
+sudo apt install git -y
+git clone -b jupyter https://github.com/lbaitemple/raspberry_IP/
+./allinstall.sh
+```
+
 # raspberry_IP
 This code will upload raspberry private ip address to iot.eclipse.org using mqtt protocol
 ```
