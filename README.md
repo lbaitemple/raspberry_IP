@@ -5,9 +5,10 @@ sudo raspi-config
 
 # Install all
 ```
-chmod +x *.sh
 sudo apt install git -y
 git clone -b jupyter https://github.com/lbaitemple/raspberry_IP/
+cd ~/raspberry_IP/
+chmod +x *.sh
 ./allinstall.sh
 ```
 
@@ -21,7 +22,7 @@ chmod +x loadscreen.sh
 ./loadscreen.sh
 ```
 
-# Install jupyter lab with [passwd], default is raspberry
+## Install jupyter lab with [passwd], default is raspberry
 ```
 cd ~/raspberry_IP/scripts
 chmod +x jupyter.sh
@@ -29,7 +30,7 @@ chmod +x jupyter.sh
 
 ```
 
-# Install ROS
+## Install ROS
 
 ```
 cd ~/raspberry_IP/
@@ -38,7 +39,7 @@ chmod +x installros.sh
 ```
 
 
-# Install Greengrass v1 and v2, make sure you add aws credential first before you run the commands below
+## Install Greengrass v1 and v2, make sure you add aws credential first before you run the commands below
 ```
 cd ~/raspberry_IP/
 chmod +x greengrass.sh
