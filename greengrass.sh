@@ -5,8 +5,8 @@ export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 export AWS_SESSION_TOKEN=AQoDYXdzEJr1K...o5OytwEXAMPLE=
 export REGION=us-east-1
 
-echo "fs.protected_hardlinks = 1" >> /etc/sysctl.d/98-rpi.conf
-echo "protected_symlinks = 1" >> /etc/sysctl.d/98-rpi.conf
+sudo echo "fs.protected_hardlinks = 1" >> /etc/sysctl.d/98-rpi.conf
+sudo echo "protected_symlinks = 1" >> /etc/sysctl.d/98-rpi.conf
 sudo apt install openjdk-8-jdk -y
 cd ~
 curl -s https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip > greengrass-nucleus-latest.zip
