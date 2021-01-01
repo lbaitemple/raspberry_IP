@@ -36,6 +36,7 @@ cd ~/raspberry_IP/
 chmod +x greengrass.sh
 ./greengrass.sh
 ```
+appene 'cgroup_enable=memory cgroup_memory=1' to the end of /boot/cmdline.txt
 
 ```
 sudo service greengrass start
