@@ -1,11 +1,17 @@
 #!/bin/sh
 
 #wget -q -O ./gg-device-setup-latest.sh https://d1onfpft10uf5o.cloudfront.net/greengrass-device-setup/downloads/gg-device-setup-latest.sh && chmod +x ./gg-device-setup-latest.sh && sudo -E ./gg-device-setup-latest.sh bootstrap-greengrass-interactive
-export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+export AWS_ACCESS_KEY_ID=
 export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 export AWS_SESSION_TOKEN=AQoDYXdzEJr1K...o5OytwEXAMPLE=
 export REGION=us-east-1
 
+
+if [$AWS_ACCESS_KEY_ID -eq "" ]
+then
+   echo "please setup your environment variable before you procceed"
+   exit
+fi
 #wget -q -O ./gg-device-setup-latest.sh https://d1onfpft10uf5o.cloudfront.net/greengrass-device-setup/downloads/gg-device-setup-latest.sh 
 #chmod +x ./gg-device-setup-latest.sh 
 #sudo -E ./gg-device-setup-latest.sh bootstrap-greengrass
