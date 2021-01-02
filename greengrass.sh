@@ -1,10 +1,25 @@
 #!/bin/sh
 
-wget -q -O ./gg-device-setup-latest.sh https://d1onfpft10uf5o.cloudfront.net/greengrass-device-setup/downloads/gg-device-setup-latest.sh && chmod +x ./gg-device-setup-latest.sh && sudo -E ./gg-device-setup-latest.sh bootstrap-greengrass-interactive
-#export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
-#export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-#export AWS_SESSION_TOKEN=AQoDYXdzEJr1K...o5OytwEXAMPLE=
-#export REGION=us-east-1
+#wget -q -O ./gg-device-setup-latest.sh https://d1onfpft10uf5o.cloudfront.net/greengrass-device-setup/downloads/gg-device-setup-latest.sh && chmod +x ./gg-device-setup-latest.sh && sudo -E ./gg-device-setup-latest.sh bootstrap-greengrass-interactive
+export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+export AWS_SESSION_TOKEN=AQoDYXdzEJr1K...o5OytwEXAMPLE=
+export REGION=us-east-1
+
+wget -q -O ./gg-device-setup-latest.sh https://d1onfpft10uf5o.cloudfront.net/greengrass-device-setup/downloads/gg-device-setup-latest.sh 
+chmod +x ./gg-device-setup-latest.sh 
+sudo -E ./gg-device-setup-latest.sh bootstrap-greengrass
+--aws-access-key-id $AWS_ACCESS_KEY_ID
+--aws-secret-access-key $AWS_SECRET_ACCESS_KEY
+--aws-session-token $AWS_SESSION_TOKEN
+--region $REGION
+--group-name Custom_Group_Name
+--core-name Custom_Core_Name
+--ggc-root-path /greengrass
+--deployment-timeout 300
+--log-path /greengrass/ggc/var/log
+--hello-world-lambda
+--verbose
 
 #sudo bash -c 'echo "fs.protected_hardlinks = 1" >> /etc/sysctl.d/98-rpi.conf'
 #sudo bash -c 'echo "fs.protected_symlinks = 1" >> /etc/sysctl.d/98-rpi.conf'
