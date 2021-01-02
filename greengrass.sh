@@ -7,10 +7,10 @@ export AWS_SESSION_TOKEN=AQoDYXdzEJr1K...o5OytwEXAMPLE=
 export REGION=us-east-1
 
 
-if [$AWS_ACCESS_KEY_ID -eq "" ]
+if [ -z "$AWS_ACCESS_KEY_ID" ]
 then
    echo "please setup your environment variable before you procceed"
-   exit
+   exit 1
 fi
 #wget -q -O ./gg-device-setup-latest.sh https://d1onfpft10uf5o.cloudfront.net/greengrass-device-setup/downloads/gg-device-setup-latest.sh 
 #chmod +x ./gg-device-setup-latest.sh 
