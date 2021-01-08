@@ -11,7 +11,11 @@ git clone -b jupyter https://github.com/lbaitemple/raspberry_IP/
 cd ~/raspberry_IP/
 chmod +x *.sh
 ```
- Make sure you add aws credential first before you run the commands below
+ Make sure you add aws credential in greengrass.sh first before you run the commands below
+```
+nano greengrass.sh
+```
+After the credntials are save, you can run
 ```
 ./allinstall.sh
 ```
