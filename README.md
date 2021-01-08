@@ -20,6 +20,8 @@ After the credntials are save, you can run
 ./allinstall.sh
 ```
 
+Make sure you reboot.
+
 # Open a browser, you can type
 ```
 http://<raspberry_ip_address>:8888
@@ -48,28 +50,7 @@ cd ~/raspberry_IP/
 chmod +x addswap.sh
 ./addswap.sh
 ```
-
-
-### 1.1.c Install ROS
-
-```
-cd ~/raspberry_IP/
-chmod +x installros.sh
-./installros.sh
-```
-
-### 1.1.d raspberry_IP (OLED screen is required)
-This code will upload raspberry private ip address to iot.eclipse.org using mqtt protocol
-```
-sudo apt install git -y
-git clone -b jupyter https://github.com/lbaitemple/raspberry_IP/
-cd ~/raspberry_IP/
-chmod +x loadscreen.sh
-./loadscreen.sh
-```
-
-
-## 2.1 Install Greengrass v1 and v2, make sure you add aws credential first before you run the commands below
+### 1.1.c Install Greengrass v1 and v2, make sure you add aws credential first before you run the commands below
 ```
 cd ~/raspberry_IP/
 chmod +x greengrass.sh
@@ -80,3 +61,26 @@ appene 'cgroup_enable=memory cgroup_memory=1' to the end of /boot/cmdline.txt
 ```
 sudo service greengrass start
 ```
+
+
+### 1.1.d Install ROS [can be installed later, take abouut 90 mins]
+
+```
+cd ~/raspberry_IP/
+chmod +x installros.sh
+./installros.sh
+```
+
+
+### 1.1.e raspberry_IP (OLED screen is required)
+This code will upload raspberry private ip address to iot.eclipse.org using mqtt protocol
+```
+sudo apt install git -y
+git clone -b jupyter https://github.com/lbaitemple/raspberry_IP/
+cd ~/raspberry_IP/
+chmod +x loadscreen.sh
+./loadscreen.sh
+```
+
+
+
