@@ -34,14 +34,14 @@ cd ~/raspberry_IP/
 chmod +x *.sh
 ```
 
-### 1.1.b Install jupyter lab with [passwd], default is raspberry
+### 1.1.a Install jupyter lab with [passwd], default is raspberry
 ```
 cd ~/raspberry_IP/scripts
 chmod +x jupyter.sh
 ./jupyter.sh [passwd]
 ```
 
-### 1.1.c add swap
+### 1.1.b add swap
 This code will upload raspberry private ip address to iot.eclipse.org using mqtt protocol
 ```
 cd ~/raspberry_IP/
@@ -50,7 +50,7 @@ chmod +x addswap.sh
 ```
 
 
-### 1.1.d Install ROS
+### 1.1.c Install ROS
 
 ```
 cd ~/raspberry_IP/
@@ -58,7 +58,7 @@ chmod +x installros.sh
 ./installros.sh
 ```
 
-### 1.1.a raspberry_IP (OLED screen is required)
+### 1.1.d raspberry_IP (OLED screen is required)
 This code will upload raspberry private ip address to iot.eclipse.org using mqtt protocol
 ```
 sudo apt install git -y
