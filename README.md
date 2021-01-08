@@ -19,6 +19,13 @@ After the credntials are save, you can run
 ```
 ./allinstall.sh
 ```
+
+# Open a browser, you can type
+```
+http://<raspberry_ip_address>:8888
+```
+The password/token is raspberry
+
 # If you do not have an I2C based OLED screen, or you want to do them step by step
 ```
 sudo apt install git -y
