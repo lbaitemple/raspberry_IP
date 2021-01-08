@@ -3,23 +3,24 @@
 sudo raspi-config
 ```
 choose I2C interface enabled by select 3, select P5, select Yes, then Ok. Use tab key to select Finish and quite.
-## 1.1 Install all for 1.1.a, 1.1.b and 1.1.c
+
+# If you have an I2C based OLED Screen
 ```
 sudo apt install git -y
 git clone -b jupyter https://github.com/lbaitemple/raspberry_IP/
 cd ~/raspberry_IP/
 chmod +x *.sh
+```
+ Make sure you add aws credential first before you run the commands below
+```
 ./allinstall.sh
 ```
-
-### 1.1.a raspberry_IP (OLED screen is required)
-This code will upload raspberry private ip address to iot.eclipse.org using mqtt protocol
+# If you do not have an I2C based OLED screen, or you want to do them step by step
 ```
 sudo apt install git -y
 git clone -b jupyter https://github.com/lbaitemple/raspberry_IP/
 cd ~/raspberry_IP/
-chmod +x loadscreen.sh
-./loadscreen.sh
+chmod +x *.sh
 ```
 
 ### 1.1.b Install jupyter lab with [passwd], default is raspberry
@@ -44,6 +45,16 @@ chmod +x addswap.sh
 cd ~/raspberry_IP/
 chmod +x installros.sh
 ./installros.sh
+```
+
+### 1.1.a raspberry_IP (OLED screen is required)
+This code will upload raspberry private ip address to iot.eclipse.org using mqtt protocol
+```
+sudo apt install git -y
+git clone -b jupyter https://github.com/lbaitemple/raspberry_IP/
+cd ~/raspberry_IP/
+chmod +x loadscreen.sh
+./loadscreen.sh
 ```
 
 
