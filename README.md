@@ -2,7 +2,7 @@
 ```
 sudo raspi-config
 ```
-
+choose I2C interface enabled by select 3, select P5, select Yes, then Ok. Use tab key to select Finish and quite.
 ## 1.1 Install all for 1.1.a, 1.1.b and 1.1.c
 ```
 sudo apt install git -y
