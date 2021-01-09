@@ -5,7 +5,7 @@ set -e
 password=${1:-raspberry}
 
 sudo apt-get update
-curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt install -y  python3-pip nodejs libffi-dev 
 sudo pip3 install setuptools
 sudo apt install libffi-dev -y
