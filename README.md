@@ -59,9 +59,13 @@ chmod +x greengrass.sh
 appene 'cgroup_enable=memory cgroup_memory=1' to the end of /boot/cmdline.txt
 
 ```
+sudo /greengrass/ggc/core/greengrassd start
+```
+or
+```
 sudo service greengrass start
 ```
-
+check any issue with greengrass at https://docs.aws.amazon.com/greengrass/latest/developerguide/setup-filter.rpi.html
 
 ### 1.1.d Install ROS [can be installed later, take abouut 90 mins]
 
