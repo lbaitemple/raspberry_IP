@@ -1,4 +1,12 @@
-# Turn on I2C in interface
+# Download 64-bit image
+https://downloads.raspberrypi.org/raspios_arm64/images/
+
+After copy the image, please check the boot directory
+```
+sudo echo "kernel=kernel8.img">> /boot/config.txt
+```
+
+# Turn on I2C in interface and add 64-bit kernel
 ```
 sudo raspi-config
 ```
