@@ -141,9 +141,11 @@ while not killer.kill_now:
     CODE=subprocess.check_output(cmd, shell = True )
 
     # Write two lines of text.
+    cmd="vcgencmd measure_temp | cut -d = -f2"
+    TEMP=subprocess.check_output(cmd, shell = True )
 
     draw.text((x, top),       "IP: " + str(IP,'utf-8'),  font=font, fill=255)
-    draw.text((x, top+8),     cpu_temp(), font=font, fill=255)
+    draw.text((x, top+8),     "TEMP: " + str(TEMP,'utf-8'), font=font, fill=255)
     draw.text((x, top+16),    str(CODE,'utf-8'),  font=font, fill=255)
  #   draw.text((x, top+25),    str(Disk),  font=font, fill=255)
 
