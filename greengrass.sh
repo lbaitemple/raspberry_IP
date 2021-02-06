@@ -36,8 +36,8 @@ unzip greengrass-nucleus-latest.zip -d GreengrassCore && rm greengrass-nucleus-l
 sudo -E java -Dlog.store=FILE   -jar ./GreengrassCore/lib/Greengrass.jar   --aws-region $REGION   --root /greengrass/v2 --thing-name MyGreengrassCore   --thing-group-name MyGreengrassCoreGroup   --tes-role-name MyGreengrassV2TokenExchangeRole   --tes-role-alias-name MyGreengrassCoreTokenExchangeRoleAlias   --component-default-user ggc_user:ggc_group   --provision true   --setup-system-service true   --deploy-dev-tools true
 sudo chmod 755 /greengrass/v2 && sudo chmod 755 /greengrass
 # download greengrass v1
-wget https://d1onfpft10uf5o.cloudfront.net/greengrass-core/downloads/1.9.4/greengrass-linux-armv7l-1.9.4.tar.gz
-gunzip -c greengrass-linux-armv7l-1.9.4.tar.gz | sudo tar -xvf - --directory /
+wget https://d1onfpft10uf5o.cloudfront.net/greengrass-core/downloads/1.9.4/greengrass-linux-aarch64-1.9.4.tar.gz
+gunzip -c https://d1onfpft10uf5o.cloudfront.net/greengrass-core/downloads/1.9.4/greengrass-linux-aarch64-1.9.4.tar.gz | sudo tar -xvf - --directory /
 sudo wget -O /greengrass/certs/root.ca.pem https://www.amazontrust.com/repository/AmazonRootCA1.pem
 # add ggc_user
 sudo adduser --system ggc_user
