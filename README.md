@@ -15,7 +15,7 @@ choose I2C interface enabled by select 3, select P5, select Yes, then Ok. Use ta
 # If you have an I2C based OLED Screen
 ```
 sudo apt install git -y
-git clone -b jupyter https://github.com/lbaitemple/raspberry_IP/
+git clone -b aarch64 https://github.com/lbaitemple/raspberry_IP/
 cd ~/raspberry_IP/
 chmod +x *.sh
 ```
