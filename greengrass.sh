@@ -37,7 +37,7 @@ sudo -E java -Dlog.store=FILE   -jar ./GreengrassCore/lib/Greengrass.jar   --aws
 sudo chmod 755 /greengrass/v2 && sudo chmod 755 /greengrass
 # download greengrass v1
 sudo bash -c 'wget https://d1onfpft10uf5o.cloudfront.net/greengrass-core/downloads/1.9.4/greengrass-linux-$(arch)-1.9.4.tar.gz'
-sudo bash -c 'gunzip -c https://d1onfpft10uf5o.cloudfront.net/greengrass-core/downloads/1.9.4/greengrass-linux-$(arch)-1.9.4.tar.gz | sudo tar -xvf - --directory /'
+sudo bash -c 'gunzip -c greengrass-linux-$(arch)-1.9.4.tar.gz | sudo tar -xvf - --directory /'
 
 #wget https://d1onfpft10uf5o.cloudfront.net/greengrass-core/downloads/1.9.4/greengrass-linux-aarch64-1.9.4.tar.gz
 #gunzip -c https://d1onfpft10uf5o.cloudfront.net/greengrass-core/downloads/1.9.4/greengrass-linux-aarch64-1.9.4.tar.gz | sudo tar -xvf - --directory /
