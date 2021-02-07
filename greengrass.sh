@@ -6,10 +6,10 @@
 #export AWS_SESSION_TOKEN=
 export REGION=us-east-1
 
-if [ -z "$AWS_ACCESS_KEY_ID" ] || [ -z "$AWS_SECRET_ACCESS_KEY" ] || [ -z "$AWS_SESSION_TOKEN" ]; then
-   echo "please setup your AWS environment variables before you procceed"
-   exit 1
-fi
+#if [ -z "$AWS_ACCESS_KEY_ID" ] || [ -z "$AWS_SECRET_ACCESS_KEY" ] || [ -z "$AWS_SESSION_TOKEN" ]; then
+#   echo "please setup your AWS environment variables before you procceed"
+#   exit 1
+#fi
 #wget -q -O ./gg-device-setup-latest.sh https://d1onfpft10uf5o.cloudfront.net/greengrass-device-setup/downloads/gg-device-setup-latest.sh 
 #chmod +x ./gg-device-setup-latest.sh 
 #sudo -E ./gg-device-setup-latest.sh bootstrap-greengrass
