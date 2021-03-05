@@ -1,10 +1,8 @@
 # Download 64-bit image
 https://downloads.raspberrypi.org/raspios_arm64/images/
 
-After copy the image, please check the boot directory
-```
-sudo echo "kernel=kernel8.img">> /boot/config.txt
-```
+http://downloads.raspberrypi.org/raspios_lite_arm64/images/raspios_lite_arm64-2020-08-24/
+
 
 # Turn on I2C in interface and add 64-bit kernel
 ```
