@@ -3,7 +3,7 @@ https://downloads.raspberrypi.org/raspios_arm64/images/
 
 http://downloads.raspberrypi.org/raspios_lite_arm64/images/raspios_lite_arm64-2020-08-24/
 
-
+sudo apt-get update --allow-releaseinfo-change
 # Turn on I2C in interface and add 64-bit kernel
 ```
 sudo raspi-config
