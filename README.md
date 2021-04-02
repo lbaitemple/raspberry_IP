@@ -96,5 +96,16 @@ chmod +x loadscreen.sh
 ./loadscreen.sh
 ```
 
-
+### Install Docker
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+```
+Add otheer architectures
+```
+sudo apt-get install qemu binfmt-support qemu-user-static -y
+docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+# You can verify that you are able to execute x86 32-bits version image
+docker run --rm -t i386/ubuntu uname -m
+```
 
