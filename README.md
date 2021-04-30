@@ -110,7 +110,7 @@ docker run --rm -t i386/ubuntu uname -m
 ```
 
 
-### step 6: Setup USB-C OTG
+###  Setup USB-C OTG
 #### open configuration file
 ```
 sudo nano /boot/config.txt
