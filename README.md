@@ -96,6 +96,27 @@ chmod +x loadscreen.sh
 ./loadscreen.sh
 ```
 
+### Install Samba
+```
+sudo apt-get install samba samba-common-bin -y
+mkdir /home/pi/shared
+sudo nano /etc/samba/smb.conf
+```
+add the following to the end of the file
+```
+[FPGA]
+path = /home/pi/shared
+writeable=Yes
+create mask=0777
+directory mask=0777
+public=no
+```
+add password
+```
+sudo smbpasswd -a pi
+sudo systemctl restart smbd
+```
+
 ### Install Docker
 ```
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -246,4 +267,5 @@ exit 0
 sudo chmod +x /etc/rc.local
 sudo chmod +x /root/usb.sh
 ```
+
 
