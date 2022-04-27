@@ -13,6 +13,12 @@ cp raspberry_IP/stats.py ~/stats.py
 chmod +x ~/test2.sh
 ```
 
+You will need to enable I2C interface 
+```
+sudo raspi-config
+```
+choose Interface Options and select P5:I2C to enable it
+
 Now, you will need to create a startup service
 ```
 sudo cp raspberry_IP/ipaddress.service /lib/systemd/system
