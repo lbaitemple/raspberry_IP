@@ -1,6 +1,17 @@
 # raspberry_IP
+
 You will need to get an
 [OLED screen](https://www.amazon.com/PEMENOL-Display-0-96inch-Raspberry-Microcontroller/dp/B07F3KY8NF/ref=asc_df_B07F3KY8NF/?tag=hyprod-20&linkCode=df0&hvadid=366338360563&hvpos=&hvnetw=g&hvrand=12501945816479314715&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9007196&hvtargid=pla-617553222439&psc=1&tag=&ref=&adgrpid=79101991107&hvpone=&hvptwo=&hvadid=366338360563&hvpos=&hvnetw=g&hvrand=12501945816479314715&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9007196&hvtargid=pla-617553222439)
+
+
+Easy Way:
+```
+git clone -b nomqtt  https://github.com/lbaitemple/raspberry_IP/
+cd raspberry_IP/
+bash ./loadall.sh
+```
+
+Also, you can try the following way
 
 #This code will upload raspberry private ip address to iot.eclipse.org using mqtt protocol
 ```
