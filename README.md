@@ -6,6 +6,7 @@ You will need to get an
 
 Easy Way:
 ```
+sudo apt install git -y
 git clone -b nomqtt  https://github.com/lbaitemple/raspberry_IP/
 cd raspberry_IP/
 bash ./loadall.sh
