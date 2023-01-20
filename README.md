@@ -12,7 +12,7 @@ choose Interface Options and select P5:I2C to enable it
 Easy Way:
 ```
 sudo apt install git -y
-git clone -b nomqtt  https://github.com/lbaitemple/raspberry_IP/
+git clone -b python3  https://github.com/lbaitemple/raspberry_IP/
 cd raspberry_IP/
 bash ./loadall.sh
 ```
@@ -21,9 +21,9 @@ Also, you can try the following way
 
 #This code will upload raspberry private ip address to iot.eclipse.org using mqtt protocol
 ```
-sudo apt-get install python-pip python-pil  i2c-tools git mosquitto-clients -y
-git clone -b nomqtt  https://github.com/lbaitemple/raspberry_IP/
-sudo pip install Adafruit_SSD1306 RPi.GPIO Adafruit_BBIO
+sudo apt-get install python3-pip python3-pil  i2c-tools git mosquitto-clients -y
+git clone -b python3  https://github.com/lbaitemple/raspberry_IP/
+sudo pip3 install Adafruit_SSD1306 RPi.GPIO Adafruit_BBIO
 sudo sh raspberry_IP/setup-i2c.sh
 cp raspberry_IP/newtest2.sh ~/test2.sh
 cp raspberry_IP/stats.py ~/stats.py
