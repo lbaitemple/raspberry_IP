@@ -143,9 +143,9 @@ while not killer.kill_now:
 
     # Write two lines of text.
 
-    draw.text((x, top),       "IP: " + str(IP),  font=font, fill=255)
+    draw.text((x, top+25),       "IP: " + IP.decode('utf-8'),  font=font, fill=255)
     draw.text((x, top+8),     cpu_temp(), font=font, fill=255)
-    draw.text((x, top+16),    str(CODE),  font=font, fill=255)
+    draw.text((x, top),    str(CODE),  font=font, fill=255)
  #   draw.text((x, top+25),    str(Disk),  font=font, fill=255)
 
     # Display image.
