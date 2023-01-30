@@ -10,6 +10,7 @@ m_i2c="3c"
 ##############
 echo "Starting script sayIPbs "
 private=`hostname -I | sed -E -e 's/[[:blank:]]+/_/g' `
+i2c_cmd=`raspi-config nonint do_i2c 0`
 
 mapfile -t data < <(i2cdetect -y 1)
 
