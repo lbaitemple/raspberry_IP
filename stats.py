@@ -20,16 +20,15 @@
 # THE SOFTWARE.
 import time
 
-import Adafruit_GPIO.SPI as SPI
-import Adafruit_SSD1306
-
-from PIL import Image
-from PIL import ImageDraw
-from PIL import ImageFont
-
-import subprocess
-import signal
+import math
 import time
+import subprocess
+from PIL import Image, ImageDraw, ImageFont
+from board import SCL, SDA
+import busio
+import adafruit_ssd1306
+
+import signal
 
 class GracefulKiller:
   kill_now = False
@@ -40,8 +39,8 @@ class GracefulKiller:
 
   def exit_gracefully(self,signum, frame):
     print ("exit")
-    self.display.clear()
-    self.display.display()
+    self.display.fill(0)
+    self.display.show()
     self.kill_now = True
  
 def cpu_temp():
@@ -55,6 +54,8 @@ DC = 23
 SPI_PORT = 0
 SPI_DEVICE = 0
 
+i2c = busio.I2C(SCL, SDA)
+
 # Beaglebone Black pin configuration:
 # RST = 'P9_12'
 # Note the following are only used with SPI:
@@ -63,7 +64,8 @@ SPI_DEVICE = 0
 # SPI_DEVICE = 0
 
 # 128x32 display with hardware I2C:
-disp = Adafruit_SSD1306.SSD1306_128_32(rst=RST)
+#disp = Adafruit_SSD1306.SSD1306_128_32(rst=RST)
+disp = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c)
 
 # 128x64 display with hardware I2C:
 # disp = Adafruit_SSD1306.SSD1306_128_64(rst=RST)
@@ -87,11 +89,12 @@ disp = Adafruit_SSD1306.SSD1306_128_32(rst=RST)
 # disp = Adafruit_SSD1306.SSD1306_128_32(rst=RST, dc=DC, sclk=18, din=25, cs=22)
 
 # Initialize library.
-disp.begin()
+#disp.begin()
+disp.fill(0)
 
 # Clear display.
-disp.clear()
-disp.display()
+#disp.clear()
+#disp.display()
 
 # Create blank image for drawing.
 # Make sure to create image with mode '1' for 1-bit color.
@@ -150,5 +153,5 @@ while not killer.kill_now:
 
     # Display image.
     disp.image(image)
-    disp.display()
+    disp.show()
     time.sleep(1)
