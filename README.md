@@ -24,7 +24,7 @@ Also, you can try the following way
 sudo apt-get install python3-pip python3-pil  i2c-tools git -y
 sudo apt-get install libopenjp2-7 libtiff5 libatlas-base-dev -y
 git clone -b python3  https://github.com/lbaitemple/raspberry_IP/
-sudo pip3 install Adafruit-Blinka adafruit-circuitpython-ssd1306 --break-system-package
+sudo pip3 install  --break-system-package Adafruit-Blinka adafruit-circuitpython-ssd1306
 sudo sh raspberry_IP/setup-i2c.sh
 cp raspberry_IP/newtest2.sh ~/test2.sh
 cp raspberry_IP/stats.py ~/stats.py
