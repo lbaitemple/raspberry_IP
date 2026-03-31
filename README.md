@@ -21,7 +21,8 @@ Also, you can try the following way
 
 #This code will upload raspberry private ip address to iot.eclipse.org using mqtt protocol
 ```
-sudo apt-get install python3-pip python3-pil  i2c-tools git -y
+sudo apt update
+sudo apt-get install python3-pip python3-pil python3-rpi.gpio  i2c-tools git -y
 sudo apt-get install libopenjp2-7 libatlas-base-dev -y
 git clone -b circuitpython  https://github.com/lbaitemple/raspberry_IP/
 sudo pip3 install  --break-system-package adafruit-blinka adafruit-circuitpython-ssd1306
