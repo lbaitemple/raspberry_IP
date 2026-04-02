@@ -24,3 +24,11 @@ sudo systemctl enable  ipaddress
 sudo systemctl start  ipaddress
 ```
 
+You can also download the ubuntu image [here](https://github.com/lbaitemple/raspberry_IP/releases/download/ubuntu/ubuntu_24.04_1_s.zip)
+
+username: ubuntu
+
+password: manadang
+
+
+You can create a 50-cloud-init.yaml file at [here](http://bit.ly/pihash)
