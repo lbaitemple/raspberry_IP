@@ -24,7 +24,7 @@ sudo systemctl enable  ipaddress
 sudo systemctl start  ipaddress
 ```
 
-You can also download the ubuntu 24.04 image [here](https://github.com/lbaitemple/raspberry_IP/releases/download/ubuntu/ubuntu_24.04_1_s.zip)
+You can also download the ubuntu 24.04 image for raspberry pi 4 [here](https://github.com/lbaitemple/raspberry_IP/releases/download/ubuntu/ubuntu_24.04_1_s.zip)
 
 username: ubuntu
 
