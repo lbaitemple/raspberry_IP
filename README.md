@@ -1,5 +1,14 @@
 # raspberry_IP
 
+
+## ubuntu 24.04 wpa_supplicant 
+
+- you can download [file](https://github.com/lbaitemple/raspberry_IP/releases/download/ubuntu/ubuntu_24.04_rpi5_4_11_2026_s.zip)
+
+- get wpa_supplicant conf file from [here](http://temple.s.gy/pihash)
+
+
+
 You will need to get an
 [OLED screen](https://www.amazon.com/PEMENOL-Display-0-96inch-Raspberry-Microcontroller/dp/B07F3KY8NF/ref=asc_df_B07F3KY8NF/?tag=hyprod-20&linkCode=df0&hvadid=366338360563&hvpos=&hvnetw=g&hvrand=12501945816479314715&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9007196&hvtargid=pla-617553222439&psc=1&tag=&ref=&adgrpid=79101991107&hvpone=&hvptwo=&hvadid=366338360563&hvpos=&hvnetw=g&hvrand=12501945816479314715&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9007196&hvtargid=pla-617553222439)
 
