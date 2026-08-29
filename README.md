@@ -5,7 +5,7 @@
 
 - you can download [file](https://github.com/lbaitemple/raspberry_IP/releases/download/ubuntu/ubuntu_24.04_rpi5_4_11_2026_s.zip)
 
-- get wpa_supplicant conf file from [here](http://temple.s.gy/pihash)
+- get wpa_supplicant-wlan0.conf file from [here](http://temple.s.gy/pihash)
 
 
 
